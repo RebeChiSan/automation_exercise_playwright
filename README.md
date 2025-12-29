@@ -6,7 +6,7 @@ Este proyecto implementa un framework de automatización de pruebas para la apli
 
 ## 🚀 Alcance de la Automatización.
 
-Se han automatizado 24 **casos de prueba** que validan flujos de trabajo críticos y funcionalidades clave. La cobertura incluye:
+Se han automatizado 23 **casos de prueba** que validan flujos de trabajo críticos y funcionalidades clave. La cobertura incluye:
 
 * **Validación de la interfaz de usuario (UI)**: Verificación de la presencia y el estado de elementos clave.
 * **Validación de flujos de trabajo complejos**: Simulación de interacciones de usuario en escenarios como el inicio de sesión, el registro de usuarios y el llenado de formularios.
