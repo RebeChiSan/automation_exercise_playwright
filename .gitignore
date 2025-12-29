@@ -4,8 +4,8 @@
 /blob-report/
 /playwright/.cache/
 
-#Env
-/.env/
+#Env variables
+.env
 
 #Node
 /node_modules/

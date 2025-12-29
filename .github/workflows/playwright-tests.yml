@@ -41,6 +41,8 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
       
       - name: Run Playwright tests
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
         run: npx playwright test --project=${{ matrix.browser }}
       
       - name: Upload Playwright report
