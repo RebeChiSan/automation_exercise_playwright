@@ -1,3 +1,0 @@
-Test failed: TC_05: Register User with existing email
-Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
-Duration: 30008ms

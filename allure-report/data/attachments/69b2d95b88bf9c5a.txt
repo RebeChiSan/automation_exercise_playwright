@@ -1,3 +1,0 @@
-Test failed: TC_14: Place Order: Register while Checkout
-Error: Test timeout of 180000ms exceeded.
-Duration: 180026ms

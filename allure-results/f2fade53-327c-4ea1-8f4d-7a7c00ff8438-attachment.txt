@@ -1,6 +1,0 @@
-Test failed: TC_17: Remove Products From Cart
-Error: Error: expect(received).toEqual(expected) // deep equality
-
-Expected: 3
-Received: 5
-Duration: 20639ms

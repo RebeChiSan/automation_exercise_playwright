@@ -1,6 +1,0 @@
-Test failed: TC_20: Search Products and Verify Cart After Login
-Error: Error: expect(received).toEqual(expected) // deep equality
-
-Expected: 3
-Received: 4
-Duration: 36213ms

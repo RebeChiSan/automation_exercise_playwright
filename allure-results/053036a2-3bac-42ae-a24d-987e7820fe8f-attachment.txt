@@ -1,3 +1,0 @@
-Test failed: TC_11: Verify Subscription in Cart page
-Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
-Duration: 30011ms

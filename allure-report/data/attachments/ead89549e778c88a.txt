@@ -1,3 +1,0 @@
-Iniciando borrado de 2 productos...
-Eliminado producto 1. Quedan: 4
-Eliminado producto 2. Quedan: 3

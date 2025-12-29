@@ -1,3 +1,0 @@
-Test failed: TC_23: Verify address details in checkout page
-Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
-Duration: 30015ms

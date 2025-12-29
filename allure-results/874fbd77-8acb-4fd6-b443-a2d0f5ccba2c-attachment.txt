@@ -1,3 +1,0 @@
-Test failed: TC_18: View Category Products
-Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
-Duration: 30006ms

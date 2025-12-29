@@ -1,3 +1,0 @@
-Test failed: TC_13: Verify Product quantity in Cart
-Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
-Duration: 30014ms

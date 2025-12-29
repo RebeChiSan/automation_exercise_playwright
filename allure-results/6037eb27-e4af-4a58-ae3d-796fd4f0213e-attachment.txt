@@ -1,3 +1,0 @@
-Test failed: TC_01: Register new user
-Error: TypeError: signupPage.createAccount is not a function
-Duration: 8990ms

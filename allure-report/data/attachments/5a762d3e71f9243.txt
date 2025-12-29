@@ -1,3 +1,0 @@
-Test failed: TC_02: Login User with correct email and password
-Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
-Duration: 30008ms

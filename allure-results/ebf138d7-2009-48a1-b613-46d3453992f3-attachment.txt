@@ -1,3 +1,0 @@
-Test failed: TC_15: Place Order: Register before Checkout
-Error: Test timeout of 180000ms exceeded.
-Duration: 180013ms
