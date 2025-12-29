@@ -1,0 +1,17 @@
+Test failed: TC_20: Search Products and Verify Cart After Login
+Error: Error: expect(locator).toBeHidden() failed
+
+Locator:  locator('.cart_quantity_delete').first()
+Expected: hidden
+Received: visible
+Timeout:  5000ms
+
+Call log:
+  - Expect "toBeHidden" with timeout 5000ms
+  - waiting for locator('.cart_quantity_delete').first()
+    4 × locator resolved to <a data-product-id="40" class="cart_quantity_delete">…</a>
+      - unexpected value "visible"
+    5 × locator resolved to <a data-product-id="41" class="cart_quantity_delete">…</a>
+      - unexpected value "visible"
+
+Duration: 19861ms

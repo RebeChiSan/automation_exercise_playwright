@@ -1,0 +1,3 @@
+Test failed: TC_12: Add Products in Cart
+Error: Test timeout of 120000ms exceeded.
+Duration: 120005ms

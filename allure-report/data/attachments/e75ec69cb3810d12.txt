@@ -1,0 +1,3 @@
+Test failed: TC_24: Download Invoice after purchase order
+Error: Test timeout of 180000ms exceeded.
+Duration: 180008ms

@@ -1,0 +1,6 @@
+Test failed: TC_17: Remove Products From Cart
+Error: TimeoutError: locator.waitFor: Timeout 6000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Continue Shopping' }) to be visible
+
+Duration: 62099ms

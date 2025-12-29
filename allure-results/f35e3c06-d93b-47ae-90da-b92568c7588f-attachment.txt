@@ -1,0 +1,16 @@
+(6)
+Test failed: TC_19: View & Cart Brand Products
+Error: Error: expect(locator).toHaveCount(expected) failed
+
+Locator:  locator('.product-image-wrapper')
+Expected: NaN
+Received: 6
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveCount" with timeout 5000ms
+  - waiting for locator('.product-image-wrapper')
+    9 × locator resolved to 6 elements
+      - unexpected value "6"
+
+Duration: 9724ms

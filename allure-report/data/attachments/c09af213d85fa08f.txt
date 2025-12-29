@@ -1,0 +1,6 @@
+Test failed: TC_12: Add Products in Cart
+Error: TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://automationexercise.com/", waiting until "load"
+
+Duration: 60853ms

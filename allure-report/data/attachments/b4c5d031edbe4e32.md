@@ -1,0 +1,264 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14]:
+            - /url: /
+            - generic [ref=e15]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17]:
+            - /url: /products
+            - generic [ref=e18]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20]:
+            - /url: /view_cart
+            - generic [ref=e21]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23]:
+            - /url: /login
+            - generic [ref=e24]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26]:
+            - /url: /test_cases
+            - generic [ref=e27]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29]:
+            - /url: /api_list
+            - generic [ref=e30]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35]:
+            - /url: /contact_us
+            - generic [ref=e36]: 
+            - text: Contact us
+  - generic [ref=e38]:
+    - img "Website for practice" [ref=e39]
+    - textbox "Search Product" [ref=e40]: saree
+    - button "" [ref=e41] [cursor=pointer]:
+      - generic [ref=e42] [cursor=pointer]: 
+  - generic [ref=e45]:
+    - generic [ref=e47]:
+      - heading "Category" [level=2] [ref=e48]
+      - generic [ref=e49]:
+        - heading " Women" [level=4] [ref=e52]:
+          - link " Women" [ref=e53]:
+            - /url: "#Women"
+            - generic [ref=e55]: 
+            - text: Women
+        - heading " Men" [level=4] [ref=e58]:
+          - link " Men" [ref=e59]:
+            - /url: "#Men"
+            - generic [ref=e61]: 
+            - text: Men
+        - heading " Kids" [level=4] [ref=e64]:
+          - link " Kids" [ref=e65]:
+            - /url: "#Kids"
+            - generic [ref=e67]: 
+            - text: Kids
+      - generic [ref=e68]:
+        - heading "Brands" [level=2] [ref=e69]
+        - list [ref=e71]:
+          - listitem [ref=e72]:
+            - link "(6) Polo" [ref=e73]:
+              - /url: /brand_products/Polo
+              - generic [ref=e74]: (6)
+              - text: Polo
+          - listitem [ref=e75]:
+            - link "(5) H&M" [ref=e76]:
+              - /url: /brand_products/H&M
+              - generic [ref=e77]: (5)
+              - text: H&M
+          - listitem [ref=e78]:
+            - link "(5) Madame" [ref=e79]:
+              - /url: /brand_products/Madame
+              - generic [ref=e80]: (5)
+              - text: Madame
+          - listitem [ref=e81]:
+            - link "(3) Mast & Harbour" [ref=e82]:
+              - /url: /brand_products/Mast & Harbour
+              - generic [ref=e83]: (3)
+              - text: Mast & Harbour
+          - listitem [ref=e84]:
+            - link "(4) Babyhug" [ref=e85]:
+              - /url: /brand_products/Babyhug
+              - generic [ref=e86]: (4)
+              - text: Babyhug
+          - listitem [ref=e87]:
+            - link "(3) Allen Solly Junior" [ref=e88]:
+              - /url: /brand_products/Allen Solly Junior
+              - generic [ref=e89]: (3)
+              - text: Allen Solly Junior
+          - listitem [ref=e90]:
+            - link "(3) Kookie Kids" [ref=e91]:
+              - /url: /brand_products/Kookie Kids
+              - generic [ref=e92]: (3)
+              - text: Kookie Kids
+          - listitem [ref=e93]:
+            - link "(5) Biba" [ref=e94]:
+              - /url: /brand_products/Biba
+              - generic [ref=e95]: (5)
+              - text: Biba
+    - generic [ref=e97]:
+      - heading "Searched Products" [level=2] [ref=e98]
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - img "ecommerce website products" [ref=e103]
+            - heading "Rs. 3000" [level=2] [ref=e104]
+            - paragraph [ref=e105]: Cotton Silk Hand Block Print Saree
+            - generic [ref=e106] [cursor=pointer]:
+              - generic [ref=e107] [cursor=pointer]: 
+              - text: Add to cart
+          - generic [ref=e108]:
+            - heading "Rs. 3000" [level=2] [ref=e109]
+            - paragraph [ref=e110]: Cotton Silk Hand Block Print Saree
+            - generic [ref=e111] [cursor=pointer]:
+              - generic [ref=e112] [cursor=pointer]: 
+              - text: Add to cart
+        - list [ref=e114]:
+          - listitem [ref=e115]:
+            - link " View Product" [ref=e116]:
+              - /url: /product_details/39
+              - generic [ref=e117]: 
+              - text: View Product
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - img "ecommerce website products" [ref=e122]
+            - heading "Rs. 3500" [level=2] [ref=e123]
+            - paragraph [ref=e124]: Rust Red Linen Saree
+            - generic [ref=e125] [cursor=pointer]:
+              - generic [ref=e126] [cursor=pointer]: 
+              - text: Add to cart
+          - generic [ref=e127]:
+            - heading "Rs. 3500" [level=2] [ref=e128]
+            - paragraph [ref=e129]: Rust Red Linen Saree
+            - generic [ref=e130] [cursor=pointer]:
+              - generic [ref=e131] [cursor=pointer]: 
+              - text: Add to cart
+        - list [ref=e133]:
+          - listitem [ref=e134]:
+            - link " View Product" [ref=e135]:
+              - /url: /product_details/40
+              - generic [ref=e136]: 
+              - text: View Product
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - img "ecommerce website products" [ref=e141]
+            - heading "Rs. 5000" [level=2] [ref=e142]
+            - paragraph [ref=e143]: Beautiful Peacock Blue Cotton Linen Saree
+            - generic [ref=e144] [cursor=pointer]:
+              - generic [ref=e145] [cursor=pointer]: 
+              - text: Add to cart
+          - generic [ref=e147]:
+            - heading "Rs. 5000" [level=2] [ref=e148]
+            - paragraph [ref=e149]: Beautiful Peacock Blue Cotton Linen Saree
+            - generic [ref=e150] [cursor=pointer]:
+              - generic [ref=e151] [cursor=pointer]: 
+              - text: Add to cart
+        - list [ref=e153]:
+          - listitem [ref=e154]:
+            - link " View Product" [ref=e155]:
+              - /url: /product_details/41
+              - generic [ref=e156]: 
+              - text: View Product
+  - contentinfo [ref=e157]:
+    - generic [ref=e162]:
+      - heading "Subscription" [level=2] [ref=e163]
+      - generic [ref=e164]:
+        - textbox "Your email address" [ref=e165]
+        - button "" [ref=e166] [cursor=pointer]:
+          - generic [ref=e167] [cursor=pointer]: 
+        - paragraph [ref=e168]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e172]: Copyright © 2021 All rights reserved
+  - link "" [ref=e173]:
+    - /url: "#top"
+    - generic [ref=e174]: 
+  - insertion [ref=e175]:
+    - iframe [ref=e177]:
+      - iframe [ref=f1e1]:
+        - generic [ref=f2e1]:
+          - generic [ref=f2e2]:
+            - generic:
+              - img [ref=f2e6] [cursor=pointer]
+              - button [ref=f2e8] [cursor=pointer]:
+                - img [ref=f2e9] [cursor=pointer]
+          - insertion [ref=f2e17]:
+            - iframe [ref=f2e18]:
+              - generic [active] [ref=f3e1]:
+                - iframe [ref=f3e6]:
+                  - generic [active] [ref=f4e1]:
+                    - generic [ref=f4e4]: "-"
+                    - generic [ref=f4e5]:
+                      - generic [ref=f4e9]:
+                        - generic [ref=f4e10]: Come Bien. Imagen Ilustrativa al sabor. T&C
+                        - img [ref=f4e11]
+                      - generic [ref=f4e13]:
+                        - generic [ref=f4e14]:
+                          - generic [ref=f4e15]:
+                            - generic [ref=f4e16]: ¿
+                            - generic [ref=f4e17]: T
+                            - generic [ref=f4e18]: o
+                            - generic [ref=f4e19]: m
+                            - generic [ref=f4e20]: a
+                            - generic [ref=f4e21]: s
+                            - generic [ref=f4e22]: m
+                            - generic [ref=f4e23]: á
+                            - generic [ref=f4e24]: s
+                            - generic [ref=f4e25]: v
+                            - generic [ref=f4e26]: i
+                            - generic [ref=f4e27]: t
+                            - generic [ref=f4e28]: a
+                            - generic [ref=f4e29]: m
+                            - generic [ref=f4e30]: i
+                            - generic [ref=f4e31]: "n"
+                            - generic [ref=f4e32]: a
+                            - generic [ref=f4e33]: s
+                          - generic [ref=f4e34]:
+                            - generic [ref=f4e35]: q
+                            - generic [ref=f4e36]: u
+                            - generic [ref=f4e37]: e
+                            - generic [ref=f4e38]: d
+                            - generic [ref=f4e39]: e
+                            - generic [ref=f4e40]: c
+                            - generic [ref=f4e41]: i
+                            - generic [ref=f4e42]: s
+                            - generic [ref=f4e43]: i
+                            - generic [ref=f4e44]: o
+                            - generic [ref=f4e45]: "n"
+                            - generic [ref=f4e46]: e
+                            - generic [ref=f4e47]: s
+                            - generic [ref=f4e48]: "?"
+                        - generic [ref=f4e49]:
+                          - generic [ref=f4e50]: Complementa tu nutrición diaria
+                          - generic [ref=f4e51]: con Silk como fuente de calcio
+                        - generic [ref=f4e52]:
+                          - generic [ref=f4e53]: NUEVO SILK MÁS
+                          - generic [ref=f4e54]: CREMOSO Y DELICIOSO
+                        - generic [ref=f4e55]: Cómpralo aquí
+                        - generic [ref=f4e56]: Cómpralo aquí
+                      - img "close" [ref=f4e57] [cursor=pointer]
+                      - generic [ref=f4e59]: Más cremoso* (vs fórmula anterior). Complementa tu nutrición diaria agregando el Nuevo Silk a tus recetas. La proteina ayuda al fortalecimiento de los músculos. Sin lactosa* (las bebidas vegetales no son leche ni derivados lacteos). Complementa tu nutrición diaria con Silk que es fuente de calcio. Las bebidas vegetales no son leche ni derivados lacteos.
+                    - img "replay button" [ref=f4e60] [cursor=pointer]
+                - iframe
+```

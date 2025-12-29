@@ -1,0 +1,3 @@
+Test failed: TC_16: Place Order: Login before Checkout
+Error: Test timeout of 180000ms exceeded.
+Duration: 180008ms

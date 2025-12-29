@@ -1,0 +1,3 @@
+Test failed: TC_26:  Verify Scroll Up without "Arrow" button and Scroll Down functionality
+Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
+Duration: 30016ms

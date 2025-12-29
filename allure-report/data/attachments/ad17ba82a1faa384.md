@@ -1,0 +1,151 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9] [cursor=pointer]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15] [cursor=pointer]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18] [cursor=pointer]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21] [cursor=pointer]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - generic [ref=e24] [cursor=pointer]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e27] [cursor=pointer]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e30] [cursor=pointer]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33] [cursor=pointer]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e36] [cursor=pointer]: 
+            - text: Contact us
+  - generic [ref=e38]:
+    - list [ref=e40]:
+      - listitem [ref=e41]:
+        - link "Home" [ref=e42] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e43]: Shopping Cart
+    - generic [ref=e48] [cursor=pointer]: Proceed To Checkout
+    - table [ref=e50]:
+      - rowgroup [ref=e51]:
+        - row "Item Description Price Quantity Total" [ref=e52]:
+          - cell "Item" [ref=e53]
+          - cell "Description" [ref=e54]
+          - cell "Price" [ref=e55]
+          - cell "Quantity" [ref=e56]
+          - cell "Total" [ref=e57]
+          - cell [ref=e58]
+      - rowgroup [ref=e59]:
+        - row "Product Image Blue Top Women > Tops Rs. 500 1 Rs. 500 " [ref=e60]:
+          - cell "Product Image" [ref=e61]:
+            - link "Product Image" [ref=e62] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e63] [cursor=pointer]
+          - cell "Blue Top Women > Tops" [ref=e64]:
+            - heading "Blue Top" [level=4] [ref=e65]:
+              - link "Blue Top" [ref=e66] [cursor=pointer]:
+                - /url: /product_details/1
+            - paragraph [ref=e67]: Women > Tops
+          - cell "Rs. 500" [ref=e68]:
+            - paragraph [ref=e69]: Rs. 500
+          - cell "1" [ref=e70]:
+            - button "1" [ref=e71] [cursor=pointer]
+          - cell "Rs. 500" [ref=e72]:
+            - paragraph [ref=e73]: Rs. 500
+          - cell "" [ref=e74]:
+            - generic [ref=e76] [cursor=pointer]: 
+        - row "Product Image Men Tshirt Men > Tshirts Rs. 400 1 Rs. 400 " [ref=e77]:
+          - cell "Product Image" [ref=e78]:
+            - link "Product Image" [ref=e79] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e80] [cursor=pointer]
+          - cell "Men Tshirt Men > Tshirts" [ref=e81]:
+            - heading "Men Tshirt" [level=4] [ref=e82]:
+              - link "Men Tshirt" [ref=e83] [cursor=pointer]:
+                - /url: /product_details/2
+            - paragraph [ref=e84]: Men > Tshirts
+          - cell "Rs. 400" [ref=e85]:
+            - paragraph [ref=e86]: Rs. 400
+          - cell "1" [ref=e87]:
+            - button "1" [ref=e88] [cursor=pointer]
+          - cell "Rs. 400" [ref=e89]:
+            - paragraph [ref=e90]: Rs. 400
+          - cell "" [ref=e91]:
+            - generic [ref=e93] [cursor=pointer]: 
+        - row "Product Image Sleeveless Dress Women > Dress Rs. 1000 1 Rs. 1000 " [ref=e94]:
+          - cell "Product Image" [ref=e95]:
+            - link "Product Image" [ref=e96] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e97] [cursor=pointer]
+          - cell "Sleeveless Dress Women > Dress" [ref=e98]:
+            - heading "Sleeveless Dress" [level=4] [ref=e99]:
+              - link "Sleeveless Dress" [ref=e100] [cursor=pointer]:
+                - /url: /product_details/3
+            - paragraph [ref=e101]: Women > Dress
+          - cell "Rs. 1000" [ref=e102]:
+            - paragraph [ref=e103]: Rs. 1000
+          - cell "1" [ref=e104]:
+            - button "1" [ref=e105] [cursor=pointer]
+          - cell "Rs. 1000" [ref=e106]:
+            - paragraph [ref=e107]: Rs. 1000
+          - cell "" [ref=e108]:
+            - generic [ref=e110] [cursor=pointer]: 
+    - generic:
+      - insertion:
+        - generic:
+          - iframe
+  - contentinfo [ref=e111]:
+    - generic [ref=e116]:
+      - heading "Subscription" [level=2] [ref=e117]
+      - generic [ref=e118]:
+        - textbox "Your email address" [ref=e119]
+        - button "" [ref=e120] [cursor=pointer]:
+          - generic [ref=e121] [cursor=pointer]: 
+        - paragraph [ref=e122]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e126]: Copyright © 2021 All rights reserved
+  - text: 
+  - insertion [ref=e127]:
+    - iframe [ref=e130]:
+      - generic [active]:
+        - generic [ref=f1e2]:
+          - link "Advertisement" [ref=f1e4] [cursor=pointer]:
+            - /url: https://ad.doubleclick.net/pcs/click?xai=AKAOjssiCk8h8WkAqykQqxiNLIcgMB2OPHZpyrlwxSjCkwzrpRSZFPMdx7wbwto1ar06lDBzb179P_mfrZw1X80ZHTgqfUvrXa9xnGiXplyYKJVfiHh_qWsMlYxHz7SEtB-aMnV70vtceNJ8UxfxVEW91Ufq3BaxL8z-sVnc4gW8XVDYvenbIryRqpQe98W_wor9iLSH5cHdN6IOCKkh0H9lDX8qAd-4P-2j1Pi1I9422gHiWeEheqQgIhKYKHMTy6B51les378wj5b-c6EkilDB_7en70IOBOFUqz8D-P32tUiazZ5zLEIAWTpTmQvkpXvBWqEx35CVJN3ed2YfxRJJTYhoNDk5E9-aINaHGETe0YL7r-aTDspKIHqfMiSwLoDn9zpAnE2IioXzju4FhkloqQoAyHzVsL7pIM7rJdGZji_SXCATYcE8HNQNF90zVBQUnVicwdVd4Fv8Qi3Gi1I_f8-On9M0WoElN_LixaO7VDHa0fWwa_DK10_NagjPj-_nAg4qqM-ZdwOVd2Q7yAbaqje6fN0K_-WqJCWoVjJAozQgZyZUlTLDmLaHQvOdy0CfQLoSOdcgG0oXGVT6zFpZnNr4vAluAuPxedCYUY8bmQPg15vYKfWD6LQbKpM_4Jt2IZgsQCeOC0hhg2GahkAjoHc7-Hlc9uBZD2oPjsCKnYzXYGNClluwrlTtf6i20wQMnMXCZvxSHp0ZFyWlfIR31SgdgpweV-7T0RloZDrLtiHCpZCrZjmLEr8EFMWJ9JsMPyzO2edw6mD4VP6K8WQ4SLNrwgYlbvlShtHE_Jx7DTmR1hiBVYMx13jBx0dTiu8TCyeJwxe1sf-8Gojuzuo--InaVtgz76iqwbp92Od3oiMVKZ8WwoQmmhcT3TDl4Gvb_VKriYSk4bruWjLwgI-w4MNOdlktoYao3lWcJ1Kj6_kk01ox1Ft8gg4H8krvm-7DMkGvnQ4C2_LIe7WJ-DQ0LuFi29aTDk_HApojN5IIQa7S9VulRJkD-Q8zWPBpYdmG2Uxb89x4wXpKluDhwzhxm1DRq7FqIRVLtk1rgiiDqI7WB_bRf6tdk_nU4dVCNopVD5nr6pSYymmHYNg8nKHZBGKkdNz7ilAVrHppgsbgUXPPs_-qH0Dru93KcLuUfpOv-vNFQsgeDLXzhpo0jH-8mKxzQ9fk5AcrXt_cKz_fvqmGxl8iLOpcWZvCkByoCLUcAHY-ruXLbSXeoLtS9AB4SgIq9y0oj7nF0GlZrXV72Qf265_qOgsL1j5WvmAqe6kYqMSwUYQrspEKG5Nsq2ewewAvZpGIzSyOqflwTMnesxX-mrVGtuj7BbTJn4clftp0gBHGthmalcoNAvYAz_IIIYkU1jXgNj9TMWTV6RsuGoRpVPFD46ZwGF6RIa9aKJYHRNJcDknn6uOeml-Tndj_86DsE0a-WHJcr3SenrDQ7ETpOiV1bJvewxeteE2Lb5fZ1kRNd3ys495BCDWCOXb14zNjfZF4qvcte2DAUtIRikAgIn700tE1lLhZY2B0n2mTywtT0WOYf7muecMPHGkIeEYh8ta4Uvt4qmdSrokYC87aluZDRS_fIa5HI6cK-ifxmHqtY-cr-zLxusy7UmONcCdXiVrmHvZEE-pD5Dzg0hmk8Qe4IgE6_8G8dYcQ-bhNG38JeMRoWVwi1G-Sa2fp3uNvzFR8Zvnqq1FnC52mq9r6HIGwzIZvgF6igf8Jg2uCGY6ZbKogTYzyehaTlkghdin-RdtjuqW3hgu6XCQtsSBen-goqFC6LX4oug&sai=AMfl-YQAxfRbInr5KnEvEi9-OUzrxRJCSiq6rdAswvJgbvvwYMjp0RqnYx_Ejv8W9I7EMYmrH-1rN8yjWDSiZ2ofRlu2uo0WlRLUZDOVZ6NhX7wgLlNcGoNNAatisnTmuDlgjsLmkGy4f0WKgw1Pyr7sBeEyyeRDiIFotwCU_V0Tc3AAOaUFE6Swf01bI6W0w3NskXVXhW0A8G4RWEg7nQ01Lzx1MPaDrUG8x_zuB8VRIE0iyXfewPlWmRRWtIsOAqFA-mMZ0od7c3db-kM-GgmeTRMXSRTgcUHutebhaeKET8KURyxR0qq_moisCPkECdGxt8AKz8RFFxdbGR05AW_gJG4AiJ6SIKmIIf46PtTgNjIWzGpWlUJCg8DBxVsZJTFbrkTt4vT6nuHitcBXN07GVw-nFCRUxZiOXmJ3DEAphITguUkwz8L6vbFAB1Jtc4B_V4g5FYMp0PB4zrH8LGy_t7TJXC4hD_lJiFrZUNnsYPtfUQxFd93YDcNEVmXHSGMY2MFKtOL7bev643EdbGjJLq5K-BYG4cx-O10_IucVm3i_5qrIJrbRsHRe7lG7bpNwxpVMaiOvzvP47gRdwTyR0YK0QR-WYfdv9D6BiJPWzw0IY9a-m2T_w8x5ajsj93BlkrE2LTYgrAs3vg&sig=Cg0ArKJSzFGqMZOAnfft&fbs_aeid=%5Bgw_fbsaeid%5D&crd=aHR0cHM6Ly9zaWdtYWFsZHJpY2guY29t&urlfix=1&adurl=https://www.sigmaaldrich.com/GB/en/products%3Futm_source%3Ddbm%26utm_medium%3Dcpm%26utm_campaign%3Dmrk_sls_2025_mr_upper%2Bfunnel%2Balwayson_paidmedia_awareness_tid000001964%26dclid%3D%25edclid!%26gad_source%3D7
+            - img "Advertisement" [ref=f1e5] [cursor=pointer]
+          - generic [ref=f1e6]:
+            - generic:
+              - img [ref=f1e10] [cursor=pointer]
+              - button [ref=f1e12] [cursor=pointer]:
+                - img [ref=f1e13] [cursor=pointer]
+        - iframe
+```

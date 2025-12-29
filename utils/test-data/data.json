@@ -1,0 +1,97 @@
+{
+    "wrongUser": {
+        "userName": "wrongUser",
+        "emailAddress": "iAmAwrongUser@example.com",
+        "password": "wrongPassword"
+    },
+    "existingUser": {
+        "userName": "Jonanne",
+        "prefix": "Mrs.",
+        "firstName": "Anne",
+        "lastName": "Jones",
+        "fullName": "Mrs. Anne Jones",
+        "emailAddress": "iAmAnneJones@example.com",
+        "password": "123456",
+        "DOB": {
+            "day": "20",
+            "month": "05",
+            "year": "1990"
+        },
+        "companyName": "Random Company",
+        "address1": "123 Somewhere Street",
+        "address2": "Apt 123",
+        "country": "United States",
+        "state": "New York",
+        "city": "Manhattan",
+        "zipCode": "12345",
+        "phoneNumber": "1234567890",
+        "fullAddress": "Manhattan New York 12345"
+    },
+    "newUser": {
+        "userName": "Donjoe",
+        "prefix": "Mr.",
+        "firstName": "Joe",
+        "lastName": "Don",
+        "fullName": "Mr. Joe Don",
+        "emailAddress": "iAmJoeDon@example.com",
+        "password": "test12345",
+        "DOB": {
+            "day": "5",
+            "month": "November",
+            "year": "1987"
+        },
+        "companyName": "SomeCompany",
+        "address1": "Address 1",
+        "address2": "Address 2",
+        "country": "Canada",
+        "state": "Quebec",
+        "city": "Montreal",
+        "zipCode": "12345",
+        "phoneNumber": "1234567890",
+        "fullAddress": "Montreal Quebec 12345"
+    },
+    "paymentDetails": {
+        "cardName": "Platacard",
+        "cardNumber": "7894",
+        "cvc": "123",
+        "expirationMonth": "11",
+        "expirationYear": "2030"
+    },
+    "reviewInfo": {
+        "name": "Atenea",
+        "email": "usuarioAtenea@gmail.com",
+        "message": "This is a review"
+    },
+    "contactInfo": {
+        "name": "Peter Parker",
+        "email": "iAmPeterParker@example.com",
+        "subject": "Hello there",
+        "message": "This is a message for you",
+        "filePath": "test-data/doc_test.docx"
+    },
+    "subscribeEmail": "test852@example.com",
+    "comment": "This is a test comment",
+    "products": {
+        "searchProduct": "saree",
+        "brands": {
+            "polo": {
+                "name": "Polo",
+                "title": "Brand - Polo Products"
+            },
+            "biba": {
+                "name": "Biba",
+                "title": "Brand - Biba Products"
+            }
+        },
+        "subcategories": {
+            "dress": {
+                "title": "Women - Dress Products",
+                "categoryId": "1"
+            },
+            "jeans": {
+                "title": "Men - Jeans Products",
+                "categoryId": "6"
+            }
+        }
+    }
+}

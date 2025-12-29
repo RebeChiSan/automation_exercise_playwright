@@ -1,0 +1,15 @@
+Test failed: TC_17: Remove Products From Cart
+Error: Error: expect(locator).toBeHidden() failed
+
+Locator:  locator('.cart_quantity_delete').nth(3)
+Expected: hidden
+Received: visible
+Timeout:  5000ms
+
+Call log:
+  - Expect "toBeHidden" with timeout 5000ms
+  - waiting for locator('.cart_quantity_delete').nth(3)
+    8 × locator resolved to <a data-product-id="4" class="cart_quantity_delete">…</a>
+      - unexpected value "visible"
+
+Duration: 29953ms

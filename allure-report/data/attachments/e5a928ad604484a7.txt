@@ -1,0 +1,3 @@
+Test failed: TC_22: Add to cart from Recommended items
+Error: Test timeout of 30000ms exceeded while running "beforeEach" hook.
+Duration: 30010ms

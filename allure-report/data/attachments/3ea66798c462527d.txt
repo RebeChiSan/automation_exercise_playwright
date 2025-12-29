@@ -1,0 +1,3 @@
+Test failed: TC_17: Remove Products From Cart
+Error: Test timeout of 120000ms exceeded.
+Duration: 120016ms

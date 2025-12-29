@@ -1,0 +1,170 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link "Website for automation practice" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "Website for automation practice" [ref=e9] [cursor=pointer]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link " Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e15] [cursor=pointer]: 
+            - text: Home
+        - listitem [ref=e16]:
+          - link " Products" [ref=e17] [cursor=pointer]:
+            - /url: /products
+            - generic [ref=e18] [cursor=pointer]: 
+            - text: Products
+        - listitem [ref=e19]:
+          - link " Cart" [ref=e20] [cursor=pointer]:
+            - /url: /view_cart
+            - generic [ref=e21] [cursor=pointer]: 
+            - text: Cart
+        - listitem [ref=e22]:
+          - link " Signup / Login" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - generic [ref=e24] [cursor=pointer]: 
+            - text: Signup / Login
+        - listitem [ref=e25]:
+          - link " Test Cases" [ref=e26] [cursor=pointer]:
+            - /url: /test_cases
+            - generic [ref=e27] [cursor=pointer]: 
+            - text: Test Cases
+        - listitem [ref=e28]:
+          - link " API Testing" [ref=e29] [cursor=pointer]:
+            - /url: /api_list
+            - generic [ref=e30] [cursor=pointer]: 
+            - text: API Testing
+        - listitem [ref=e31]:
+          - link " Video Tutorials" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/c/AutomationExercise
+            - generic [ref=e33] [cursor=pointer]: 
+            - text: Video Tutorials
+        - listitem [ref=e34]:
+          - link " Contact us" [ref=e35] [cursor=pointer]:
+            - /url: /contact_us
+            - generic [ref=e36] [cursor=pointer]: 
+            - text: Contact us
+  - generic [ref=e38]:
+    - list [ref=e40]:
+      - listitem [ref=e41]:
+        - link "Home" [ref=e42] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e43]: Shopping Cart
+    - generic [ref=e48] [cursor=pointer]: Proceed To Checkout
+    - table [ref=e50]:
+      - rowgroup [ref=e51]:
+        - row "Item Description Price Quantity Total" [ref=e52]:
+          - cell "Item" [ref=e53]
+          - cell "Description" [ref=e54]
+          - cell "Price" [ref=e55]
+          - cell "Quantity" [ref=e56]
+          - cell "Total" [ref=e57]
+          - cell [ref=e58]
+      - rowgroup [ref=e59]:
+        - row "Product Image Blue Top Women > Tops Rs. 500 1 Rs. 500 " [ref=e60]:
+          - cell "Product Image" [ref=e61]:
+            - link "Product Image" [ref=e62] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e63] [cursor=pointer]
+          - cell "Blue Top Women > Tops" [ref=e64]:
+            - heading "Blue Top" [level=4] [ref=e65]:
+              - link "Blue Top" [ref=e66] [cursor=pointer]:
+                - /url: /product_details/1
+            - paragraph [ref=e67]: Women > Tops
+          - cell "Rs. 500" [ref=e68]:
+            - paragraph [ref=e69]: Rs. 500
+          - cell "1" [ref=e70]:
+            - button "1" [ref=e71] [cursor=pointer]
+          - cell "Rs. 500" [ref=e72]:
+            - paragraph [ref=e73]: Rs. 500
+          - cell "" [ref=e74]:
+            - generic [ref=e76] [cursor=pointer]: 
+        - row "Product Image Men Tshirt Men > Tshirts Rs. 400 1 Rs. 400 " [ref=e77]:
+          - cell "Product Image" [ref=e78]:
+            - link "Product Image" [ref=e79] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e80] [cursor=pointer]
+          - cell "Men Tshirt Men > Tshirts" [ref=e81]:
+            - heading "Men Tshirt" [level=4] [ref=e82]:
+              - link "Men Tshirt" [ref=e83] [cursor=pointer]:
+                - /url: /product_details/2
+            - paragraph [ref=e84]: Men > Tshirts
+          - cell "Rs. 400" [ref=e85]:
+            - paragraph [ref=e86]: Rs. 400
+          - cell "1" [ref=e87]:
+            - button "1" [ref=e88] [cursor=pointer]
+          - cell "Rs. 400" [ref=e89]:
+            - paragraph [ref=e90]: Rs. 400
+          - cell "" [ref=e91]:
+            - generic [ref=e93] [cursor=pointer]: 
+        - row "Product Image Sleeveless Dress Women > Dress Rs. 1000 1 Rs. 1000 " [ref=e94]:
+          - cell "Product Image" [ref=e95]:
+            - link "Product Image" [ref=e96] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e97] [cursor=pointer]
+          - cell "Sleeveless Dress Women > Dress" [ref=e98]:
+            - heading "Sleeveless Dress" [level=4] [ref=e99]:
+              - link "Sleeveless Dress" [ref=e100] [cursor=pointer]:
+                - /url: /product_details/3
+            - paragraph [ref=e101]: Women > Dress
+          - cell "Rs. 1000" [ref=e102]:
+            - paragraph [ref=e103]: Rs. 1000
+          - cell "1" [ref=e104]:
+            - button "1" [ref=e105] [cursor=pointer]
+          - cell "Rs. 1000" [ref=e106]:
+            - paragraph [ref=e107]: Rs. 1000
+          - cell "" [ref=e108]:
+            - generic [ref=e110] [cursor=pointer]: 
+        - row "Product Image Stylish Dress Women > Dress Rs. 1500 1 Rs. 1500 " [ref=e111]:
+          - cell "Product Image" [ref=e112]:
+            - link "Product Image" [ref=e113] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e114] [cursor=pointer]
+          - cell "Stylish Dress Women > Dress" [ref=e115]:
+            - heading "Stylish Dress" [level=4] [ref=e116]:
+              - link "Stylish Dress" [ref=e117] [cursor=pointer]:
+                - /url: /product_details/4
+            - paragraph [ref=e118]: Women > Dress
+          - cell "Rs. 1500" [ref=e119]:
+            - paragraph [ref=e120]: Rs. 1500
+          - cell "1" [ref=e121]:
+            - button "1" [ref=e122] [cursor=pointer]
+          - cell "Rs. 1500" [ref=e123]:
+            - paragraph [ref=e124]: Rs. 1500
+          - cell "" [ref=e125]:
+            - generic [ref=e127] [cursor=pointer]: 
+        - row "Product Image Winter Top Women > Tops Rs. 600 1 Rs. 600 " [ref=e128]:
+          - cell "Product Image" [ref=e129]:
+            - link "Product Image" [ref=e130] [cursor=pointer]:
+              - /url: ""
+              - img "Product Image" [ref=e131] [cursor=pointer]
+          - cell "Winter Top Women > Tops" [ref=e132]:
+            - heading "Winter Top" [level=4] [ref=e133]:
+              - link "Winter Top" [ref=e134] [cursor=pointer]:
+                - /url: /product_details/5
+            - paragraph [ref=e135]: Women > Tops
+          - cell "Rs. 600" [ref=e136]:
+            - paragraph [ref=e137]: Rs. 600
+          - cell "1" [ref=e138]:
+            - button "1" [ref=e139] [cursor=pointer]
+          - cell "Rs. 600" [ref=e140]:
+            - paragraph [ref=e141]: Rs. 600
+          - cell "" [ref=e142]:
+            - generic [ref=e144] [cursor=pointer]: 
+  - contentinfo [ref=e145]:
+    - generic [ref=e150]:
+      - heading "Subscription" [level=2] [ref=e151]
+      - generic [ref=e152]:
+        - textbox "Your email address" [ref=e153]
+        - button "" [ref=e154] [cursor=pointer]:
+          - generic [ref=e155] [cursor=pointer]: 
+        - paragraph [ref=e156]:
+          - text: Get the most recent updates from
+          - text: our site and be updated your self...
+    - paragraph [ref=e160]: Copyright © 2021 All rights reserved
+  - text: 
+```

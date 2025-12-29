@@ -1,0 +1,3 @@
+Iniciando borrado de 2 productos...
+elementoslocator('.cart_quantity_delete').last()
+elementoslocator('.cart_quantity_delete').last()
