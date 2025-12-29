@@ -19,10 +19,8 @@ export class ViewCartPage extends BasePage {
         this.cartTable = page.locator("#cart_info_table");
         this.productRows = this.cartTable.locator('tr[id*="product-"]');
         this.quantityText = page.locator("button[class='disabled']");
-        //this.checkoutButton = page.getByRole("link", { name: "Proceed To Checkout" });
         this.checkoutButton = page.locator("//a[text()='Proceed To Checkout']");
         this.registerLoginLink = page.getByRole("link", { name: "Register / Login" });
-        //this.deleteButtonList = page.locator("//a[@class='cart_quantity_delete']")
         this.deleteButtonList = page.locator(".cart_quantity_delete");
         this.productDescriptionTextList = page.locator("//td[@class='cart_description']/h4");
         this.productDescriptionList = page.locator("//td[@class='cart_description']");
@@ -49,7 +47,6 @@ export class ViewCartPage extends BasePage {
     async deleteProducts(items?: number) {
         const totalAvailable = await this.deleteButtonList.count();
         const numToDelete = items ?? totalAvailable;
-        console.log(`Iniciando borrado de ${numToDelete} productos...`);
         for (let i = 0; i < numToDelete; i++) {
             // 1. Obtenemos cuántos hay ANTES de borrar
             const countBefore = await this.deleteButtonList.count();
@@ -61,7 +58,6 @@ export class ViewCartPage extends BasePage {
             // 3. ESPERA CRÍTICA: Esperar a que el número de elementos disminuya
             // Esto es mucho más fiable que 'detached' en listas dinámicas
             await expect(this.deleteButtonList).toHaveCount(countBefore - 1);
-            console.log(`Eliminado producto ${i + 1}. Quedan: ${countBefore - 1}`);
         }
     }
 
@@ -74,9 +70,6 @@ export class ViewCartPage extends BasePage {
         for (let i = 0; i < cartProductCount; i++) {
             const product = this.productDescriptionList.nth(i);
             await expect(product).toBeVisible();
-        }
-        if (process.env.DEBUG) {
-            console.log(`${searchedProductNumber} products are visible in the cart`);
         }
     }
 

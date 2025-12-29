@@ -11,12 +11,11 @@ export class BasePage {
     readonly productsLink: Locator;
     readonly loginLink: Locator;
     readonly scrollUpIcon: Locator;
-    readonly brandLink: Locator
     readonly subscriptionTitle: Locator
     readonly emailSubscriptionInput: Locator
     readonly subscribeButton: Locator
-    readonly successSubscriptionMessage: Locator;
     readonly modalContent: Locator
+    readonly successSubscriptionMessage: Locator;
 
 
     constructor(page: Page) {
@@ -30,13 +29,12 @@ export class BasePage {
         this.contactUsLink = page.locator("//a[text()=' Contact us']");
         this.homeLink = page.locator("//a[text()=' Home']");
         this.scrollUpIcon = page.locator("#scrollUp");
-        this.brandLink = page.locator('.brands-name a');//este no va aqui o hay que ver por que no lo ocupo en esta pagina
-        //this.subscriptionTitle = page.getByText("Subscription");//no lo ocupo en esta pagina
         this.subscriptionTitle = page.getByRole('heading', { name: "Subscription" });//no lo ocupo en esta pagina
         this.emailSubscriptionInput = page.getByPlaceholder("Your email address");
         this.subscribeButton = page.locator("#subscribe");
-        this.successSubscriptionMessage = page.getByText("You have been successfully subscribed!");//no lo ocupo en esta pagina
         this.modalContent = page.locator(".show");
+        this.successSubscriptionMessage = page.getByText("You have been successfully subscribed!");//no lo ocupo en esta pagina
+
     }
 
     async clickHome() {

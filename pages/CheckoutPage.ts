@@ -42,8 +42,6 @@ export class CheckoutPage extends BasePage {
     }
 
     async verifyDeliveryAddressDetails(user: any) {
-        //console.log("si llego aqui o no")
-        //await this.page.getByRole('heading', { name: 'Your delivery address' }).waitFor()
         await expect(this.fullName).toHaveText(user.fullName);
         await expect(this.company).toHaveText(user.companyName);
         await expect(this.address1).toHaveText(user.address1);
@@ -54,7 +52,6 @@ export class CheckoutPage extends BasePage {
     }
 
     async verifyBillingAddressDetails(user: any) {
-        //await this.page.getByRole('heading', { name: 'Your billing address' }).waitFor()
         await expect(this.fullNameInvoice).toHaveText(user.fullName);
         await expect(this.companyInvoice).toHaveText(user.companyName);
         await expect(this.address1Invoice).toHaveText(user.address1);
@@ -64,10 +61,10 @@ export class CheckoutPage extends BasePage {
         await expect(this.phoneInvoice).toHaveText(user.phoneNumber);
     }
 
-    async reviewOrder() {
+    /*async reviewOrder() {
         await expect(this.productDescription.first()).toHaveText("Blue Top");
         await expect(this.productDescription.nth(1)).toHaveText("Men Tshirt");
-    }
+    }*/
 
     async fillComment(mesagge: string) {
         await this.commentInput.fill(mesagge);

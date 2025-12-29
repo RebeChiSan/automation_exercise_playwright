@@ -16,15 +16,14 @@ export class ProductsPage extends BasePage {
     readonly addToCartLinks: Locator
     readonly cartLink: Locator
     readonly productNameList: Locator
-    //readonly allProductsOverlay: Locator
     readonly modalContent: Locator
+    readonly brandLink: Locator
+
 
     constructor(page: Page) {
         super(page)
         this.allProductsTitle = page.getByText("All Products")
-        //this.allProductsList = page.locator(".single-products");
         this.allProductsList = page.locator(".product-image-wrapper");
-        //this.allProductsOverlay = page.locator(".product-overlay");
         this.productNameList = page.locator(".productinfo p")
         this.viewProductBtnList = page.locator("//a[contains(text(),'View Product')]")
         this.searchInput = page.getByPlaceholder("Search Product");
@@ -38,7 +37,7 @@ export class ProductsPage extends BasePage {
         this.brandsList = page.locator("//a[contains(@href, 'brand_products')]");
         this.cartLink = page.locator("//a[text()=' Cart']");
         this.modalContent = page.locator(".modal-content");
-
+        this.brandLink = page.locator('.brands-name a');
     }
 
     async expectProductsListToBeVisible() {
@@ -73,7 +72,6 @@ export class ProductsPage extends BasePage {
             if (i < numberOfProducts - 1) {
                 const button = this.page.locator(".close-modal")
                 button.click();
-                // Esperamos a que el modal desaparezca para no interferir con el siguiente hover
                 await this.page.locator("#cartModal").waitFor({ state: 'hidden' });
             }
         }
@@ -90,7 +88,6 @@ export class ProductsPage extends BasePage {
         await expect(this.productNameList).not.toHaveCount(0);
         for (let i = 0; i < searchProductCount; i++) {
             const product = this.productNameList.nth(i);
-            // ✅ RECOMENDADO: Playwright espera a que el texto aparezca y no le importa si es A o a
             await expect(this.productNameList.nth(i))
                 .toContainText(item, { ignoreCase: true });
         }
@@ -106,14 +103,7 @@ export class ProductsPage extends BasePage {
             const brandText = await brand.innerText();
         }
     }
-    /*
-    async expectBrandProductsAreDisplayed(brand: string, items: string) {
-        await expect(this.subTitle).toHaveText(brand);
-        console.log(await this.allProductsList.count() + "heeeere")
-        let elements = await this.allProductsList.count();
-        await expect(elements).toEqual(+items[1]);
-    }
-    */
+
     async expectBrandProductsAreDisplayed(brand: string, items: string) {
         await expect(this.subTitle).toHaveText(brand);
         await expect(this.allProductsList).toHaveCount(+items);
