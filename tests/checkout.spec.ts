@@ -258,12 +258,39 @@ test.describe('Checkout Page functionalities', () => {
         //const downloadPromise = page.waitForEvent('download');
         //await paymentPage.clickOnDownloadInvoice();
         //const download = await downloadPromise;
-        const [download] = await Promise.all([
-            page.waitForEvent('download'), // Prepara el listener
-            paymentPage.clickOnDownloadInvoice(), // Ejecuta el clic
-        ]);
+        //const [download] = await Promise.all([
+        //    page.waitForEvent('download'), // Prepara el listener
+        //    paymentPage.clickOnDownloadInvoice(), // Ejecuta el clic
+        //]);
 
-        expect(download.suggestedFilename()).toContain('.txt');
+        //expect(download.suggestedFilename()).toContain('.txt');
+
+        // 1. Definimos qué respuesta estamos esperando
+        // Puedes filtrar por la URL o por el tipo de contenido
+        const responsePromise = page.waitForResponse(response => {
+            const isInvoice = response.url().includes('invoice'); // Ajusta si la URL tiene otra palabra clave
+            const isSuccess = response.status() === 200;
+            return isInvoice && isSuccess;
+        });
+
+        // 2. Ejecutamos la acción que dispara la descarga
+        await paymentPage.clickOnDownloadInvoice();
+
+        // 3. Esperamos a que la red responda
+        const response = await responsePromise;
+
+        // 4. Validamos los headers que me pasaste anteriormente
+        const contentDisposition = response.headers()['content-disposition'];
+        console.log(`Content-Disposition recibido: ${contentDisposition}`);
+
+        // Verificamos que el header contenga el nombre esperado
+        expect(contentDisposition).toContain('invoice.txt');
+
+        // Opcional: Si necesitas el nombre exacto sugerido
+        const fileName = contentDisposition.split('filename=')[1] || '';
+        expect(fileName).toContain('.txt');
+
+        console.log('¡Prueba superada en WebKit usando interceptación de red!');
 
         await paymentDonePage.clickOnContinue();
         await paymentDonePage.clickDeleteAccount();
