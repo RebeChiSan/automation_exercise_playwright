@@ -255,9 +255,14 @@ test.describe('Checkout Page functionalities', () => {
         //await paymentDonePage.expectUrlToContain(URLs.paymentSuccess);
         await expect(paymentDonePage.successOrderMessage).toBeVisible();
 
-        const downloadPromise = page.waitForEvent('download');
-        await paymentPage.clickOnDownloadInvoice();
-        const download = await downloadPromise;
+        //const downloadPromise = page.waitForEvent('download');
+        //await paymentPage.clickOnDownloadInvoice();
+        //const download = await downloadPromise;
+        const [download] = await Promise.all([
+            page.waitForEvent('download'), // Prepara el listener
+            paymentPage.clickOnDownloadInvoice(), // Ejecuta el clic
+        ]);
+
         expect(download.suggestedFilename()).toContain('.txt');
 
         await paymentDonePage.clickOnContinue();
