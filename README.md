@@ -10,7 +10,7 @@ Se han automatizado 23 **casos de prueba** que validan flujos de trabajo crític
 
 * **Validación de la interfaz de usuario (UI)**: Verificación de la presencia y el estado de elementos clave.
 * **Validación de flujos de trabajo complejos**: Simulación de interacciones de usuario en escenarios como el inicio de sesión, el registro de usuarios y el llenado de formularios.
-* **Cross-browser testing**: Las pruebas se diseñaron para verificar el funcionamientos en diferentes navegadores, en este proyecto se probo en Chrome, firefox y Safari.
+* **Cross-browser testing**: Las pruebas se diseñaron para verificar el funcionamientos en diferentes navegadores, en este proyecto se probo en Chrome y firefox.
 
 ## 🧠 Habilidades y Conocimientos Adquiridos.
 
