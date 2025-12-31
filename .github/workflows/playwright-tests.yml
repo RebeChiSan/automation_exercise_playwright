@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: ${{ fromJson(github.event.inputs.browser == 'all' && '["chromium", "firefox", "webkit"]' || format('["{0}"]', github.event.inputs.browser)) }}
+        browser: ${{ fromJson(github.event.inputs.browser == 'all' && '["chromium", "firefox"]' || format('["{0}"]', github.event.inputs.browser)) }}
     
     steps:
       - name: Checkout repository

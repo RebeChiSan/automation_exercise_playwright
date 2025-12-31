@@ -13,7 +13,6 @@ export class ViewCartPage extends BasePage {
     readonly cartLink: Locator
     readonly productDescriptionTextList: Locator
 
-
     constructor(page: Page) {
         super(page)
         this.cartTable = page.locator("#cart_info_table");
@@ -39,7 +38,6 @@ export class ViewCartPage extends BasePage {
         await this.page.locator("#checkoutModal").getByRole("link", { name: "Register / Login" }).click();
     }
 
-
     async verifyProductRemoval(add: number, remove: number) {
         await expect(this.productDescriptionList).toHaveCount(add - remove);
     }
@@ -48,21 +46,11 @@ export class ViewCartPage extends BasePage {
         const totalAvailable = await this.deleteButtonList.count();
         const numToDelete = items ?? totalAvailable;
         for (let i = 0; i < numToDelete; i++) {
-            // 1. Obtenemos cuántos hay ANTES de borrar
             const countBefore = await this.deleteButtonList.count();
-
-            // 2. Hacemos click en el primero
-            // Usamos .first() para que siempre intente borrar el que está arriba
             await this.deleteButtonList.first().click();
-
-            // 3. ESPERA CRÍTICA: Esperar a que el número de elementos disminuya
-            // Esto es mucho más fiable que 'detached' en listas dinámicas
             await expect(this.deleteButtonList).toHaveCount(countBefore - 1);
         }
     }
-
-
-
 
     async expectProductsToBeVisibleInCart(searchedProductNumber: number) {
         const cartProductCount = await this.productDescriptionList.count();

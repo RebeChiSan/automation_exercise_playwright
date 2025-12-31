@@ -29,19 +29,15 @@ test.describe('Login and Signup User functionality', () => {
 
     test('TC_01: Register new user', async () => {
         const dynamicEmail = data.newUser.emailAddress.replace("@", "+" + Date.now() + "@")
-
         await expect(loginPage.newUserSignupHeading).toBeVisible();
         await loginPage.signup(data.newUser.userName, dynamicEmail);
-
         await signupPage.expectUrl(URLs.signup);
         await expect(signupPage.accountInfoTitle).toBeVisible();
         await signupPage.fillAccountInfo(data.newUser);
         await signupPage.clickOnCreateAccount();
-
         await accountCreatedPage.expectUrl(URLs.accountCreated);
         await accountCreatedPage.expectAccountCreatedVisible();
         await accountCreatedPage.clickContinue();
-
         await accountCreatedPage.clickDeleteAccount();
         await deleteAccountPage.expectUrl(URLs.deleteAccount);
         await expect(deleteAccountPage.accountDeletedTitle).toBeVisible();
@@ -51,7 +47,6 @@ test.describe('Login and Signup User functionality', () => {
     test('TC_02: Login User with correct email and password', async () => {
         await expect(loginPage.loginHeading).toBeVisible();
         await loginPage.loginUser(data.existingUser.emailAddress, data.existingUser.password);
-
         await homePage.expectLoginUserVisible(data.existingUser.userName);
         await homePage.clickLogout();
     });
@@ -59,17 +54,14 @@ test.describe('Login and Signup User functionality', () => {
     test('TC_03: Login User with incorrect email and password', async () => {
         await expect(loginPage.loginHeading).toBeVisible();
         await loginPage.loginUser(data.wrongUser.emailAddress, data.wrongUser.password);
-
         await expect(loginPage.incorrectPasswordMessage).toBeVisible();
     });
 
     test('TC_04: Logout User', async () => {
         await expect(loginPage.loginHeading).toBeVisible();
         await loginPage.loginUser(data.existingUser.emailAddress, data.existingUser.password);
-
         await homePage.expectLoginUserVisible(data.existingUser.userName);
         await homePage.clickLogout();
-
         await expect(loginPage.loginHeading).toBeVisible();
     });
 

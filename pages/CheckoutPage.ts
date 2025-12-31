@@ -61,11 +61,6 @@ export class CheckoutPage extends BasePage {
         await expect(this.phoneInvoice).toHaveText(user.phoneNumber);
     }
 
-    /*async reviewOrder() {
-        await expect(this.productDescription.first()).toHaveText("Blue Top");
-        await expect(this.productDescription.nth(1)).toHaveText("Men Tshirt");
-    }*/
-
     async fillComment(mesagge: string) {
         await this.commentInput.fill(mesagge);
     }

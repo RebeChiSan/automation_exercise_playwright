@@ -19,7 +19,6 @@ export class ProductsPage extends BasePage {
     readonly modalContent: Locator
     readonly brandLink: Locator
 
-
     constructor(page: Page) {
         super(page)
         this.allProductsTitle = page.getByText("All Products")

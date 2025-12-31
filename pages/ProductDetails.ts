@@ -46,9 +46,11 @@ export class ProductDetailsPage extends BasePage {
         await this.page.locator("#cartModal").waitFor();
         await this.viewCartLink.click();
     }
+
     async increaseQuantityProduct(quantity: string) {
         await this.quantityInput.fill(quantity);
     }
+
     async writeReview(name: string, email: string, text: string) {
         await this.nameInput.fill(name)
         await this.emailInput.fill(email)
