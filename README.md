@@ -19,6 +19,7 @@ La implementación de este proyecto me ha proporcionado una valiosa experiencia 
 * **Diseño de frameworks de automatización**: Comprensión de la arquitectura y del patron de diseño **Page Object Model (POM)**, para crear un código de prueba modular y reutilizable.
 * **Estrategias de selección de selectores**: Dominio de la selección de elementos del DOM utilizando selectores CSS, XPath, en particular, los locators de Playwright.
 * **Manejo de aserciones**: Verificación de los resultados esperados utilizando el API de aserciones de Playwright.
+* **Uso de Fixtures**: Implementación y reutilización de fixtures personalizadas en Playwright para inyectar automáticamente instancias de Page Objects en las pruebas, mejorando la modularidad y reutilización de código.
 * **Depuración de pruebas E2E**: Habilidad para identificar y resolver fallos en las pruebas utilizando herramientas como el **Playwright Inspector** y los informes de ejecución.
 * **Gestión de asincronía**: Comprensión de los principios de la programación asíncrona en JavaScript/TypeScript para manejar de manera efectiva las esperas y los tiempos de carga del DOM.
 * **Integración y ejecución continua**: Preparación del framework para ser integrado en un pipeline de CI/CD, lo que permite la ejecución automática de pruebas en cada cambio de código.
