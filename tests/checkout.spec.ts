@@ -1,29 +1,9 @@
-import { test, expect } from "@playwright/test";
-import { HomePage } from "../pages/HomePage";
-import { LoginPage } from "../pages/LoginPage";
-import { SignUpPage } from "../pages/SignUpPage";
-import { DeleteAccountPage } from "../pages/DeleteAccountPage";
-import { AccountCreatedPage } from "../pages/AccountCreatedPage";
-import { ProductsPage } from "../pages/ProductsPage";
-import { ViewCartPage } from "../pages/ViewCartPage";
-import { CheckoutPage } from "../pages/CheckoutPage";
-import { PaymentPage } from "../pages/PaymentPage";
+import { test, expect } from "../fixtures/baseTest";
 import { URLs } from "../utils/constants";
 import data from "../utils/test-data/data.json";
 
 test.describe('Checkout Page functionalities', () => {
-    let homePage: HomePage;
-    let loginPage: LoginPage;
-    let signupPage: SignUpPage;
-    let accountCreatedPage: AccountCreatedPage;
-    let deleteAccountPage: DeleteAccountPage;
-    let productsPage: ProductsPage;
-    let viewCartPage: ViewCartPage;
-    let checkoutPage: CheckoutPage;
-    let paymentPage: PaymentPage;
-    let paymentDonePage: PaymentPage;
-
-    test.beforeEach(async ({ page }) => {
+    test.beforeEach(async ({ homePage, page }) => {
         await page.route('**/*', (route) => {
             const url = route.request().url();
             if (
@@ -38,22 +18,12 @@ test.describe('Checkout Page functionalities', () => {
                 route.continue();
             }
         });
-        homePage = new HomePage(page);
-        loginPage = new LoginPage(page);
-        signupPage = new SignUpPage(page);
-        accountCreatedPage = new AccountCreatedPage(page);
-        deleteAccountPage = new DeleteAccountPage(page);
-        productsPage = new ProductsPage(page);
-        viewCartPage = new ViewCartPage(page);
-        checkoutPage = new CheckoutPage(page);
-        paymentPage = new PaymentPage(page);
-        paymentDonePage = new PaymentPage(page);
 
         await homePage.goto("/");
         await expect(homePage.homeTitle.first()).toBeVisible();
     });
 
-    test('TC_14: Place Order: Register while Checkout', async ({ page }) => {
+    test('TC_14: Place Order: Register while Checkout', async ({ homePage, productsPage, viewCartPage, loginPage, signupPage, accountCreatedPage, paymentPage, paymentDonePage, deleteAccountPage, checkoutPage }) => {
         const numberOfProducts = 4;
         const dynamicEmail = data.newUser.emailAddress.replace("@", "+" + Date.now() + "@");
         await homePage.clickProducts();
@@ -87,7 +57,7 @@ test.describe('Checkout Page functionalities', () => {
 
     });
 
-    test('TC_15: Place Order: Register before Checkout', async () => {
+    test('TC_15: Place Order: Register before Checkout', async ({ homePage, loginPage, signupPage, accountCreatedPage, productsPage, viewCartPage, checkoutPage, paymentPage, paymentDonePage, deleteAccountPage }) => {
         const dynamicEmail = data.newUser.emailAddress.replace("@", "+" + Date.now() + "@");
         const numberOfProducts = 3;
         await homePage.clickSignupLogin();
@@ -115,7 +85,7 @@ test.describe('Checkout Page functionalities', () => {
 
     });
 
-    test('TC_16: Place Order: Login before Checkout', async () => {
+    test('TC_16: Place Order: Login before Checkout', async ({ homePage, loginPage, productsPage, viewCartPage, checkoutPage, paymentPage, paymentDonePage }) => {
         const numberOfProducts = 2;
         await homePage.clickSignupLogin();
         await loginPage.loginUser(data.existingUser.emailAddress, data.existingUser.password);
@@ -135,7 +105,7 @@ test.describe('Checkout Page functionalities', () => {
         await expect(paymentDonePage.successOrderMessage).toBeVisible();
     });
 
-    test('TC_23: Verify address details in checkout page', async () => {
+    test('TC_23: Verify address details in checkout page', async ({ homePage, loginPage, signupPage, productsPage, viewCartPage, checkoutPage, accountCreatedPage, deleteAccountPage }) => {
         const dynamicEmail = data.newUser.emailAddress.replace("@", "+" + Date.now() + "@");
         const numberOfProducts = 2;
         await homePage.clickSignupLogin();
@@ -158,7 +128,9 @@ test.describe('Checkout Page functionalities', () => {
         await expect(deleteAccountPage.accountDeletedTitle).toBeVisible();
     });
 
-    test('TC_24: Download Invoice after purchase order', async ({ page }) => {
+    test('TC_24: Download Invoice after purchase order', async ({
+        page, homePage, productsPage, viewCartPage, loginPage, signupPage, accountCreatedPage, checkoutPage, paymentPage, paymentDonePage, deleteAccountPage
+    }) => {
         const dynamicEmail = data.newUser.emailAddress.replace("@", "+" + Date.now() + "@");
         const numberOfProducts = 3;
         await homePage.clickProducts();
@@ -189,7 +161,7 @@ test.describe('Checkout Page functionalities', () => {
         await paymentPage.clickOnDownloadInvoice();
         const download = await downloadPromise;
         expect(download.suggestedFilename()).toContain('.txt');
-        await paymentDonePage.clickOnContinue();
+        await paymentPage.clickOnContinue();
         await paymentDonePage.clickDeleteAccount();
         await expect(deleteAccountPage.accountDeletedTitle).toBeVisible();
     });

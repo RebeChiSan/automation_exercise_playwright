@@ -1,33 +1,16 @@
-import { test, expect } from "@playwright/test";
-import { HomePage } from "../pages/HomePage";
-import { LoginPage } from "../pages/LoginPage";
-import { SignUpPage } from "../pages/SignUpPage";
-import { DeleteAccountPage } from "../pages/DeleteAccountPage";
-import { AccountCreatedPage } from "../pages/AccountCreatedPage";
+import { test, expect } from "../fixtures/baseTest";
 import { URLs } from "../utils/constants";
 import data from "../utils/test-data/data.json";
 
 test.describe('Login and Signup User functionality', () => {
-    let homePage: HomePage;
-    let loginPage: LoginPage;
-    let signupPage: SignUpPage;
-    let accountCreatedPage: AccountCreatedPage;
-    let deleteAccountPage: DeleteAccountPage;
-
-    test.beforeEach(async ({ page }) => {
-        homePage = new HomePage(page);
-        loginPage = new LoginPage(page);
-        signupPage = new SignUpPage(page);
-        accountCreatedPage = new AccountCreatedPage(page);
-        deleteAccountPage = new DeleteAccountPage(page);
-
+    test.beforeEach(async ({ homePage, loginPage }) => {
         await homePage.goto("/");
         await expect(homePage.homeTitle.first()).toBeVisible();
         await homePage.clickSignupLogin();
         await loginPage.expectUrl(URLs.login);
     });
 
-    test('TC_01: Register new user', async () => {
+    test('TC_01: Register new user', async ({ loginPage, signupPage, accountCreatedPage, deleteAccountPage }) => {
         const dynamicEmail = data.newUser.emailAddress.replace("@", "+" + Date.now() + "@")
         await expect(loginPage.newUserSignupHeading).toBeVisible();
         await loginPage.signup(data.newUser.userName, dynamicEmail);
@@ -44,20 +27,20 @@ test.describe('Login and Signup User functionality', () => {
 
     });
 
-    test('TC_02: Login User with correct email and password', async () => {
+    test('TC_02: Login User with correct email and password', async ({ loginPage, homePage }) => {
         await expect(loginPage.loginHeading).toBeVisible();
         await loginPage.loginUser(data.existingUser.emailAddress, data.existingUser.password);
         await homePage.expectLoginUserVisible(data.existingUser.userName);
         await homePage.clickLogout();
     });
 
-    test('TC_03: Login User with incorrect email and password', async () => {
+    test('TC_03: Login User with incorrect email and password', async ({ loginPage }) => {
         await expect(loginPage.loginHeading).toBeVisible();
         await loginPage.loginUser(data.wrongUser.emailAddress, data.wrongUser.password);
         await expect(loginPage.incorrectPasswordMessage).toBeVisible();
     });
 
-    test('TC_04: Logout User', async () => {
+    test('TC_04: Logout User', async ({ loginPage, homePage }) => {
         await expect(loginPage.loginHeading).toBeVisible();
         await loginPage.loginUser(data.existingUser.emailAddress, data.existingUser.password);
         await homePage.expectLoginUserVisible(data.existingUser.userName);

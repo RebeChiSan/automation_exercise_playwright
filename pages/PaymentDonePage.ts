@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
-export class PaymentPage extends BasePage {
+export class PaymentDonePage extends BasePage {
     readonly successOrderMessage: Locator
     readonly downloadButton: Locator
 
